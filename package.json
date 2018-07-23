@@ -1,0 +1,31 @@
+{
+  "name": "generator-azuresfmesh",
+  "version": "0.1.0",
+  "description": "Azure Service Fabric container app template generator",
+  "homepage": "https://github.com/michaelfery/generator-azuresfmesh",
+  "bugs": {
+    "url": "https://github.com/michaelfery/generator-azuresfmesh/issues"
+  },
+  "authors": {
+    "name": "Michaël Fery",
+    "url": "https://github.com/michaelfery"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "Azure",
+    "Service Fabric",
+    "Service Fabric Mesh",
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.22.5",
+    "yosay": "^1.1.0",
+    "xml2js": "^0.4.6",
+    "chalk": "^1.1.3"
+  },
+  "repository": "https://github.com/michaelfery/generator-azuresfmesh",
+  "license": "MIT"
+}
