@@ -1,0 +1,40 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "type": "string",
+      "metadata": {
+        "description": "Location of the resources."
+      }
+    }
+  },
+  "resources": [
+    {
+      "apiVersion": "2018-07-01-preview",
+      "name": "<%= appName %>Network",
+      "type": "Microsoft.ServiceFabricMesh/networks",
+      "location": "[parameters('location')]",
+      "dependsOn": [],
+      "properties": {
+        "addressPrefix": "10.0.0.4/22",
+        "ingressConfig": {
+          "layer4": []
+        }
+      }
+    },
+    {
+      "apiVersion": "2018-07-01-preview",
+      "name": "<%= appName %>",
+      "type": "Microsoft.ServiceFabricMesh/applications",
+      "location": "[parameters('location')]",
+      "dependsOn": [
+        "Microsoft.ServiceFabricMesh/networks/<%= appName %>Network"
+      ],
+      "properties": {
+        "description": "Service Fabric Mesh <%= appName %> Application!",
+        "services": []
+      }
+    }
+  ]
+}

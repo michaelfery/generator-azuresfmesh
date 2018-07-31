@@ -1,0 +1,28 @@
+{
+  "type": "Microsoft.ServiceFabricMesh/services",
+  "location": "[parameters('location')]",
+  "name": "<%= serviceName %>",
+  "properties": {
+    "description": "Service Fabric Mesh <%= serviceName %> Application!",
+    "osType": "<%= osType %>",
+    "codePackages": [
+      {
+        "name": "<%= serviceName %>Code",
+        "image": "<%= imageName %>",
+        "endpoints": [],
+        "resources": {
+          "requests": {
+            "cpu": "1",
+            "memoryInGB": "1"
+          }
+        }
+      }
+    ],
+    "replicaCount": "1",
+    "networkRefs": [
+      {
+        "name": "[resourceId('Microsoft.ServiceFabricMesh/networks', '<%= appName %>Network')]"
+      }
+    ]
+  }
+}

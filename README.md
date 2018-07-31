@@ -19,6 +19,12 @@ Then generate your new project template:
 yo azuresfmesh
 ```
 
+Add a new service to a generated app template:
+
+```bash
+yo azuresfmesh:addService
+```
+
 You can have a look at the [documentation](https://docs.microsoft.com/en-us/azure/service-fabric-mesh/service-fabric-mesh-quickstart-deploy-container) to understand how you can deploy the generated Service Fabric Mesh application
 
 
@@ -47,7 +53,8 @@ Once you have figured out all the legalities above, you can follow the steps bel
 * Make the changes
 * You can update your local Yeo using ```npm link``` (or ```sudo npm link``` as required) at the project root-level
 * Create a new project with ```yo azuresfmesh``` (ensure it picks Yeo node-module bits from your local changes)
-* Validate that changes are working as expected and not breaking anything regressively by creating and deploying the generated project on a Azure
+* Add a new service with ```yo azuresfmesh:addService``` (ensure you created a project from previous command)
+* Validate that changes are working as expected and not breaking anything regressively by creating and deploying the generated project on Azure
 * Raise a pull request and share with us 
 
 ## Debugging generator using vscode
