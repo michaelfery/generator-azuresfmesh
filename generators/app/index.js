@@ -55,7 +55,7 @@ var AppGenerator = generators.Base.extend({
       }
     );
 
-    this.composeWith('azuresfmesh2:addService', {
+    this.composeWith('azuresfmesh:addService', {
        options: { isNewApp: true }
      });  
   },
