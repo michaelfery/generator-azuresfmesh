@@ -123,7 +123,7 @@ var ServiceGenerator = generators.Base.extend({
       this.appTemplate.resources[0].properties.ingressConfig.layer4.push(layer);
     }
 
-    this.appTemplate.resources.push(serviceTemplate);
+    this.appTemplate.resources[1].properties.services.push(serviceTemplate);
 
     var templatePath = this.destinationPath("deploy/mesh.template.json");
     this.fs.writeJSON(templatePath, this.appTemplate);
