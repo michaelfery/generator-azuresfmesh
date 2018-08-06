@@ -1,6 +1,6 @@
 {
   "name": "generator-azuresfmesh",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Azure Service Fabric container app template generator",
   "homepage": "https://github.com/michaelfery/generator-azuresfmesh",
   "bugs": {
